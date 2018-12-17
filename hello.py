@@ -1,3 +1,2 @@
-def app(env, start_response):
-    start_response('200 OK', [('Content-Type', 'text/plain')])
-    return  ['Hello, world!']
+sudo ln -sf /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/default
+sudo /etc/init.d/nginx restart
