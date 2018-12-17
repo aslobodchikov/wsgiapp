@@ -1,4 +1,13 @@
 def app(environ, start_response):
+server {
+
+  listen 8080 default;
+
+  location / {
+    return 404;
+  }
+  
+}
     status = '200 OK' 
     headers = [ 
         ('Content-Type', 'text/plain')
