@@ -1,9 +1,4 @@
 def app(environ, start_response):
-    """
-    (dict, callable( status: str,
-                     headers: list[(header_name: str, header_value: str)]))
-                  -> body: iterable of strings
-    """
     status: '200 OK' 
         headers [ 
             ('Content-Type', 'text/plain')
