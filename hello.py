@@ -3,6 +3,6 @@
   headers = [
    ('Content-type','text/plain')
   ]
-  start_response(status, headers)
   body = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
+  start_response(status, headers)
   return body
