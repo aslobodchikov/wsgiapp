@@ -1,4 +1,6 @@
-def app(environ, start_response):
+ $ pip install gunicorn
+ $ cat hello.py
+    def app(environ, start_response):
     status = '200 OK' 
     headers = [ 
         ('Content-Type', 'text/plain')
@@ -6,3 +8,4 @@ def app(environ, start_response):
     body = [bytes(i + '\n', 'ascii') for i in environ['QUERY_STRING'].split('&')]
     start_response('200 OK', [('Content-Type', 'text/plain')])
     return  body
+  $ gunicorn -w 4 hello:app
